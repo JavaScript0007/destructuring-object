@@ -82,3 +82,9 @@ console.log(p, r)
 let { p: pp = 77, r: rr = 77} = o
 
 console.log(pp, rr)
+
+// rest in object destructuring 
+
+const { s, t, ...rest } = { s: 10, t: 500, g: 700, f: 45, n: 2}
+
+console.log(s, t, rest)
