@@ -1,4 +1,4 @@
-// Object destructuring
+// object destructuring
 const basicInfo = ({firstName, lastName, profession, projects}) => {
   console.log(firstName + ' ' + lastName + ' ' + profession + ' pro in ' +  projects.wifi)
 }
@@ -16,3 +16,40 @@ const person = {
 }
 
 basicInfo(person)
+
+// default values
+
+let a;
+let b;
+
+[a = 4, b = 8] = [1];
+
+console.log('Default destructuring  a = ' + a + ' b = ' + b)
+
+// parsing an array returned from a function
+
+const arrayReturn = () => [1, 2, 3, 4]
+
+let c;
+let d;
+let e;
+let f;
+
+[c, d, e, f] = arrayReturn()
+
+console.log(c, d, e, f)
+
+// ignoring some values
+
+const ignoredValues = () => [10, 20, 30, 40]
+
+let [g, , , h] = ignoredValues()
+
+console.log(g, h)
+
+// destructuring with rest pattern
+
+
+let [j, ...k] = [1, 2, 3, 4, 5]
+
+console.log(j, k)
