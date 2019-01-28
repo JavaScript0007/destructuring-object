@@ -53,3 +53,32 @@ console.log(g, h)
 let [j, ...k] = [1, 2, 3, 4, 5]
 
 console.log(j, k)
+
+// Assign to new variable names
+
+let l = {m: 70, n: 7}
+
+let { m: newM, n: newN} = l
+
+console.log(newM, newN)
+
+let obj = {
+  name: 'Vladimir',
+  role: 'developer',
+  culture: 'hip'
+}
+
+let { name: nickName, role: life, culture: style} = obj
+
+console.log(nickName, life, style)
+
+// default value with object assignment
+let o = { p: 7}
+let { p = 4, r = 5} = o
+
+console.log(p, r)
+
+// Assigning to new variables names and providing default values
+let { p: pp = 77, r: rr = 77} = o
+
+console.log(pp, rr)
