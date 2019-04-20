@@ -68,6 +68,29 @@ let obj = {
   culture: 'hip'
 }
 
+let personalInfo = 5;
+
+// offtop recursion
+const recursion = (num) => {
+  if (num < 1) {
+     return "Less then 0"    
+  }
+  if (num === 1) {
+    return num
+  }
+  else {
+    return num + recursion(num -1)
+  }
+}
+
+console.log("recursion", recursion(5))
+
+const stringReduce = (str) => {
+    return [...str].reduce((acc, word) => word + acc)
+}
+
+console.log(stringReduce(['!','n','o','i','p','m','a','h','c',' ','o','m','a','n','y','D']))
+
 let { name: nickName, role: life, culture: style} = obj
 
 console.log(nickName, life, style)
